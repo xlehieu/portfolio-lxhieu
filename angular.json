@@ -28,7 +28,8 @@
                 "glob": "**/*",
                 "input": "src/assets/",
                 "output": "/assets/"
-              }
+              },
+              "src/googlef5f7608456bd0fe3.html"
             ],
             "styles": ["src/styles.css"]
           },
