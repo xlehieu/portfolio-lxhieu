@@ -1,0 +1,348 @@
+<div class="portfolio-container">
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">
+        <h2>LÊ XUÂN HIẾU</h2>
+        <span class="subtitle">Junior Frontend Developer</span>
+      </div>
+
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" [class.active]="!menuOpen">
+        <li>
+          <a (click)="scrollToSection('home')" [class.active]="activeSection === 'home'">Home</a>
+        </li>
+        <li>
+          <a (click)="scrollToSection('about')" [class.active]="activeSection === 'about'"
+            >Giới thiệu</a
+          >
+        </li>
+        <li>
+          <a (click)="scrollToSection('skills')" [class.active]="activeSection === 'skills'"
+            >Kỹ năng</a
+          >
+        </li>
+        <li>
+          <a (click)="scrollToSection('experience')" [class.active]="activeSection === 'experience'"
+            >Kinh nghiệm</a
+          >
+        </li>
+        <li>
+          <a (click)="scrollToSection('projects')" [class.active]="activeSection === 'projects'"
+            >Dự án</a
+          >
+        </li>
+        <li>
+          <a (click)="scrollToSection('contact')" [class.active]="activeSection === 'contact'"
+            >Liên hệ</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="mobile-menu">
+    <a (click)="scrollToSection('home')">Home</a>
+    <a (click)="scrollToSection('about')">Giới thiệu</a>
+    <a (click)="scrollToSection('skills')">Kỹ năng</a>
+    <a (click)="scrollToSection('experience')">Kinh nghiệm</a>
+    <a (click)="scrollToSection('projects')">Dự án</a>
+    <a (click)="scrollToSection('contact')">Liên hệ</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="animated-bg"></div>
+    <div class="hero-content">
+      <h1>Junior Developer</h1>
+      <p>
+        Xây dựng giải pháp đa nền tảng. Tập trung vào việc phát triển ứng dụng ổn định, chất lượng
+        và đồng hành cùng đội ngũ kỹ thuật chuyên nghiệp.
+      </p>
+      <button class="cta-button" (click)="scrollToSection('contact')">
+        Liên hệ
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path
+            d="M5 10h10M10 5l5 5-5 5"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>Tóm tắt chuyên môn</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            Lập trình viên có kinh nghiệm xây dựng giải pháp đa nền tảng với ReactJS và React
+            Native. Tập trung vào việc phát triển ứng dụng ổn định, chất lượng và mong muốn đồng
+            hành cùng đội ngũ kỹ thuật chuyên nghiệp.
+          </p>
+          <p>
+            Với kinh nghiệm làm việc tại <strong>Vietapp</strong> (Frontend Developer) và
+            <strong>FDS</strong> (Fullstack Intern), tôi đã có cơ hội phát triển kỹ năng lập trình
+            và hiểu rõ quy trình phát triển phần mềm chuyên nghiệp.
+          </p>
+          <p><strong>Những điểm mạnh của tôi:</strong></p>
+          <ul class="about-list">
+            <li>✨ Xây dựng bộ component UI riêng với React Native</li>
+            <li>✨ Build & release ứng dụng mobile lên App Store và Google Play</li>
+            <li>✨ Phát triển & tối ưu hóa các hệ thống CRM, FNB, Sản xuất</li>
+            <li>✨ Quản lý state phức tạp với Redux Toolkit/Zustand</li>
+            <li>✨ Tích hợp API với TanStack Query/Redux Thunk</li>
+            <li>✨ Viết code sạch, dễ bảo trì, có performance tốt</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat-box">
+            <h3>1.5+</h3>
+            <p>Năm kinh nghiệm</p>
+          </div>
+          <div class="stat-box">
+            <h3>5</h3>
+            <p>Dự án hoàn thành</p>
+          </div>
+          <div class="stat-box">
+            <h3>2</h3>
+            <p>Công ty làm việc</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Kỹ năng</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Languages</h3>
+          <p>TypeScript, JavaScript, .NET, HTML5, CSS3/SCSS/Tailwind CSS</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚛️</div>
+          <h3>Frontend</h3>
+          <p>ReactJS (Next.js), VueJS, Elasticsearch (Querying)</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">📱</div>
+          <h3>Mobile Development</h3>
+          <p>
+            React Native, Firebase (FCM, Auth), App Store/Google Play Deployment, Keystore
+            Management
+          </p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🔄</div>
+          <h3>State Management & Data</h3>
+          <p>Zustand, Redux Toolkit, TanStack Query</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">⚙️</div>
+          <h3>Backend</h3>
+          <p>NodeJS, Bun, ASP.NET, SQL Server, MongoDB, PostgresQL</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🛠️</div>
+          <h3>Tools</h3>
+          <p>Git, Postman/Bruno, Docker, Figma</p>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">🧠</div>
+          <h3>Soft Skills</h3>
+          <p>Clean Code, Performance Optimization, Teamwork, Problem Solving</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
+      <h2>Kinh nghiệm làm việc</h2>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Frontend Developer</h3>
+          <span class="date">04/2025 - 04/2026</span>
+        </div>
+        <h4 class="font-bold">Công ty TNHH phần mềm Vietapp</h4>
+        <p class="location">📍 Hà Nội</p>
+        <ul class="experience-list">
+          <li>Chịu trách nhiệm xây dựng bộ component UI (React Native) riêng cho công ty</li>
+          <li>
+            Thực hiện build release các dự án mobile app React Native lên Apple Store và Google
+            Store
+          </li>
+          <li>
+            Phát triển và tối ưu hóa cho các hệ thống
+            <span class="font-bold">CRM, FNB và Sản xuất</span> sử dụng
+            <span class="font-bold">ReactJS và React Native</span>
+          </li>
+          <li>
+            Quản lý state ứng dụng linh hoạt với
+            <span class="font-bold">Redux Toolkit/Zustand</span>
+          </li>
+          <li>
+            Tích hợp API sử dụng <span class="font-bold">TanStack Query hoặc Redux Thunk</span> tùy
+            dự án
+          </li>
+          <li>Phối hợp với Team Backend, Team BA và Team Design (Figma) để thực hiện dự án</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <div class="experience-header">
+          <h3>Fullstack Intern</h3>
+          <span class="date">08/2024 - 04/2025</span>
+        </div>
+        <h4 class="font-bold">Công ty Cổ phần FDS</h4>
+        <p class="location">📍 Hà Nội</p>
+        <ul class="experience-list">
+          <li>Tham gia phát triển hệ thống Phần mềm quản lý vận tải của Bộ Xây dựng</li>
+          <li>
+            Thực hiện module Frontend bằng <span class="font-bold">VueJS</span> và hỗ trợ logic
+            backend bằng <span class="font-bold">NodeJS</span>
+          </li>
+          <li>Áp dụng quy trình phát triển phần mềm chuyên nghiệp trong các dự án Enterprise</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2>Dự án cá nhân</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-badge">Featured</div>
+          <div class="project-content">
+            <h3>Maquiz - Quản lý đề thi - Làm bài thi trắc nghiệm</h3>
+            <p class="project-tech">
+              <strong>Tech Stack:</strong> Next.js, Bun - ElysiaJS, Redux, TanStack Query
+            </p>
+            <p class="project-description">
+              Hệ thống thi trắc nghiệm trực tuyến hỗ trợ đồng thời nhiều người dùng, cho phép tổ
+              chức kỳ thi, quản lý lớp học và chấm điểm tự động.
+            </p>
+            <ul class="project-highlights">
+              <li>
+                Ứng dụng cấu trúc dữ liệu Hash Table để tối ưu hóa tìm kiếm và truy xuất câu hỏi
+              </li>
+              <li>Phát triển thuật toán Xáo trộn đề thi dựa trên ràng buộc về mức độ khó</li>
+              <li>
+                Xây dựng phân hệ quản lý lớp học và quản lý đề thi linh hoạt, hỗ trợ import/export
+                dữ liệu Excel/JSON
+              </li>
+              <li>Tối ưu hóa hiệu năng Backend bằng Bun runtime và Hono framework</li>
+            </ul>
+            <div class="project-links">
+              <a
+                href="https://github.com/xlehieu/bun-client-maquiz"
+                target="_blank"
+                class="link-btn"
+              >
+                Frontend Repo
+                <span class="icon">→</span>
+              </a>
+              <a
+                href="https://github.com/xlehieu/bun-server-maquiz"
+                target="_blank"
+                class="link-btn"
+              >
+                Backend Repo
+                <span class="icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Kaichi Tokyo - Hệ thống Quản lý Cửa hàng Tạp hóa</h3>
+            <p class="project-tech"><strong>Tech Stack:</strong> ASP.NET MVC, SQL Server</p>
+            <p class="project-description">
+              Hệ thống quản lý bán lẻ toàn diện cho cửa hàng đồ Nhật, bao gồm quản lý kho, quy trình
+              bán hàng tại quầy và quản lý thông tin khách hàng.
+            </p>
+            <ul class="project-highlights">
+              <li>Tích hợp phương thức xác thực Google OAuth 2.0 cho đăng nhập nhanh chóng</li>
+              <li>
+                Triển khai dịch vụ Email Sender tự động để gửi hóa đơn điện tử và thông báo khuyến
+                mãi
+              </li>
+              <li>
+                Thiết kế cấu trúc cơ sở dữ liệu SQL Server tối ưu cho danh mục sản phẩm Nhật Bản
+              </li>
+              <li>Phát triển giao diện Dashboard theo dõi mức tồn kho theo thời gian thực</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/xlehieu/KaichiTokyo" target="_blank" class="link-btn">
+                View Repository
+                <span class="icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Liên hệ với tôi</h2>
+      <p class="contact-intro">
+        Tôi luôn sẵn sàng để thảo luận về các dự án, cơ hội làm việc, hoặc chỉ đơn giản là nói
+        chuyện về web development.
+      </p>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4">
+        <a href="tel:0355055556" class="contact-card">
+          <div class="contact-icon">📞</div>
+          <h3>Điện thoại</h3>
+          <p>0355055556</p>
+        </a>
+        <a href="https://zalo.me/0355055556" class="contact-card">
+          <div class="contact-icon flex justify-center h-[50px]">
+            <div class="flex items-center">
+              <img src="../../../assets/images/zalo-logo.webp" width="40" class="block" />
+            </div>
+          </div>
+          <h3>Zalo</h3>
+          <p>Lê Xuân Hiếu</p>
+        </a>
+        <a href="mailto:xelehieu@gmail.com" class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3>Email</h3>
+          <p>xelehieu@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/xlehieu" target="_blank" class="contact-card">
+          <div class="contact-icon">💻</div>
+          <h3>GitHub</h3>
+          <p>github.com/xlehieu</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,9 @@
+<div class="w-full" style="display: block">
+  <ngx-masonry [options]="{ gutter: 10, columnWidth: '.masonry-item', percentPosition: true }">
+    @for (item of MYLOVE_IMGS(); track item) {
+      <div masonry-item class="masonry-item">
+        <img [src]="item" style="width: 100%; display: block; border-radius: 8px" />
+      </div>
+    }
+  </ngx-masonry>
+</div>
