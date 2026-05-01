@@ -267,8 +267,12 @@ section h2 {
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 24px;
-  transition: 0.3s;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Chuyển động mượt hơn */
+
+  /* Đổ bóng nhiều lớp giúp bóng sâu và thật hơn */
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.05),
+    0 10px 20px -5px rgba(15, 23, 42, 0.1);
 }
 
 .skill-card:hover,
@@ -276,9 +280,13 @@ section h2 {
 .contact-card:hover,
 .experience-card:hover,
 .stat-box:hover {
-  transform: translateY(-6px);
-  border-color: rgba(37, 99, 235, 0.25);
-  box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08);
+  transform: translateY(-8px);
+
+  /* Tăng độ đậm và thêm chút sắc xanh cho hợp với dân Tech */
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow:
+    0 20px 25px -5px rgba(37, 99, 235, 0.1),
+    0 10px 10px -5px rgba(37, 99, 235, 0.04);
 }
 
 /* hidden for GSAP */
