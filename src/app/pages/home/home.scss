@@ -368,7 +368,13 @@ section h2 {
   font-size: 12px;
   font-weight: 700;
 }
-
+.project-highlights {
+  list-style: disc;
+  padding-left: 20px; /* quan trọng để thấy bullet */
+  li {
+    margin-top:12px
+  }
+}
 .tech-stack {
   display: flex;
   flex-wrap: wrap;

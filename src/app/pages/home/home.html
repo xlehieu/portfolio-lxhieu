@@ -159,7 +159,7 @@
         <div class="skill-card">
           <div class="skill-icon">⚙️</div>
           <h3>Backend</h3>
-          <p>NodeJS, Bun, ASP.NET, SQL Server, MongoDB, PostgresQL</p>
+          <p>NodeJS,NestJS, Bun, ASP.NET, SQL Server, MongoDB, PostgresQL</p>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🛠️</div>
@@ -233,11 +233,10 @@
   <section id="projects" class="projects-section">
     <div class="container">
       <h2>Dự án cá nhân</h2>
-      <div class="projects-grid">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start gap-4">
         <div class="project-card">
-          <div class="project-badge">Featured</div>
           <div class="project-content">
-            <h3>Maquiz - Quản lý đề thi - Làm bài thi trắc nghiệm</h3>
+            <h3 class="text-sky-600 font-bold !mb-3">Maquiz - Quản lý đề thi - Làm bài thi trắc nghiệm</h3>
             <p class="project-tech">
               <strong>Tech Stack:</strong> Next.js, Bun - ElysiaJS, Redux, TanStack Query
             </p>
@@ -249,12 +248,12 @@
               <li>
                 Ứng dụng cấu trúc dữ liệu Hash Table để tối ưu hóa tìm kiếm và truy xuất câu hỏi
               </li>
-              <li>Phát triển thuật toán Xáo trộn đề thi dựa trên ràng buộc về mức độ khó</li>
               <li>
                 Xây dựng phân hệ quản lý lớp học và quản lý đề thi linh hoạt, hỗ trợ import/export
                 dữ liệu Excel/JSON
               </li>
-              <li>Tối ưu hóa hiệu năng Backend bằng Bun runtime và Hono framework</li>
+              <li>Tối ưu hóa hiệu năng Backend bằng Bun runtime và Elysia framework</li>
+              <li>Tích hợp phương thức xác thực Google OAuth 2.0 cho đăng nhập nhanh chóng</li>
             </ul>
             <div class="project-links">
               <a
@@ -276,10 +275,9 @@
             </div>
           </div>
         </div>
-
         <div class="project-card">
           <div class="project-content">
-            <h3>Kaichi Tokyo - Hệ thống Quản lý Cửa hàng Tạp hóa</h3>
+            <h3 class="text-amber-800 font-bold !mb-3">Kaichi Tokyo - Hệ thống Quản lý Cửa hàng Tạp hóa</h3>
             <p class="project-tech"><strong>Tech Stack:</strong> ASP.NET MVC, SQL Server</p>
             <p class="project-description">
               Hệ thống quản lý bán lẻ toàn diện cho cửa hàng đồ Nhật, bao gồm quản lý kho, quy trình
@@ -304,6 +302,39 @@
             </div>
           </div>
         </div>
+        <div class="project-card">
+          <div class="project-content">
+            <h3 class="text-emerald-700 font-bold !mb-3">Ezcheckin - Hệ thống checkin/checkout QR/GPS</h3>
+            <p class="project-tech">
+              <strong>Tech Stack:</strong> Nestjs, Nextjs, MongoDB
+            </p>
+            <p class="project-description">
+              Scan QR, xác thực GPS, quản lý giờ làm việc, báo cáo nhân viên
+            </p>
+            <!-- <ul class="project-highlights">
+              <li>
+                Ứng dụng cấu trúc dữ liệu Hash Table để tối ưu hóa tìm kiếm và truy xuất câu hỏi
+              </li>
+              <li>Phát triển thuật toán Xáo trộn đề thi dựa trên ràng buộc về mức độ khó</li>
+              <li>
+                Xây dựng phân hệ quản lý lớp học và quản lý đề thi linh hoạt, hỗ trợ import/export
+                dữ liệu Excel/JSON
+              </li>
+              <li>Tối ưu hóa hiệu năng Backend bằng Bun runtime và Hono framework</li>
+            </ul> -->
+            <div class="project-links">
+              <a
+                href="https://github.com/xlehieu/ezcheckin"
+                target="_blank"
+                class="link-btn"
+              >
+                Git Repo
+                <span class="icon">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
